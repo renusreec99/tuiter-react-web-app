@@ -1,0 +1,16 @@
+*{
+    background-color: black;
+}
+.wd-color-white{
+    color:white !important;
+
+}
+.wd-color-gray{
+    background-color:gray !important;
+}
+.wd-bg-color-white{
+    background-color:gray;
+}
+.wd-input-placeholder{
+    color:white;
+}
