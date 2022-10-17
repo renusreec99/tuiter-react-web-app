@@ -6,7 +6,7 @@ const exploreItems = [
     content:'Amazing show about <a href=#>@Inspiration4x</a> mission!',
     cover:'images/download.jpeg',
     comment:'Countdown: Inspiration4 Mission to Space | Netflix Official Site',
-    theory:'From training to launch to landing, this all access rides along with the Inspiration4 crew on the first all-civilian orbital space<br><i class="fa fa-link"></i>&nbsp netflix.com',
+    theory:'From training to launch to landing, this all access rides along with the inspiration4 crew on the first civilian orbital space<br><i class="fa fa-link"></i>&nbsp netflix.com',
     comments:'2k',
     shares:'5k',
     hearts:'22k'},
