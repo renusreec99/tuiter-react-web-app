@@ -7,7 +7,7 @@ const PostListnew = ({posts}) =>{
         <div className="list-group-item">
             <div className="row">
                 <div className="col-2">
-                    <img src={posts.image} className="rounded-circle"  height="40px" width="40px"/>
+                    <img src={posts.image} className="rounded-circle"  height="40px" width="40px" alt= "nt"/>
                 </div>
                 <div className="col-10 p-0">
                     <span className="text-black">{posts.username}</span>
@@ -18,7 +18,7 @@ const PostListnew = ({posts}) =>{
             </div>
             <div className="row rounded  border-secondary">
                 <div className={` border-secondary ${posts.comment} ? 'rounded' : '' `}>
-                    <img  className="rounded  w-100" style={{borderRadius: '20px'}}src={posts.cover}/>
+                    <img  className="rounded  w-100" style={{borderRadius: '20px'}}src={posts.cover} alt= "nt"/>
                     {posts.comment?
                     <div className={` border-top w-100  border-secondary ${posts.comment?'':''}`} >
                         <h6 className="text-black ">{posts.comment}</h6>
