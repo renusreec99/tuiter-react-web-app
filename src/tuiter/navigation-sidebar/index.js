@@ -8,11 +8,11 @@ const NavigationSidebar = (
     return (
       <div className="list-group">
         <a className="list-group-item" href="i">Tuiter</a>
-        <a href="/tuiter/home" className={`list-group-item
+        <a href="#" className={`list-group-item
                        ${active === 'home'?'active':''}`}>
           <Link to="/tuiter/home" style={{"textDecoration":"none", "color":"black"}}>Home</Link>
           </a>
-        <a href="/tuiter/explore" className={`list-group-item
+        <a href="#" className={`list-group-item
                        ${active === 'explore'?'active':''}`}>
         <Link to="/tuiter/explore" style={{"textDecoration":"none", "color":"black"}}>Explore</Link>
          
