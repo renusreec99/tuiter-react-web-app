@@ -4,8 +4,6 @@ import LocationSearchingIcon from '@mui/icons-material/LocationSearching';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import IconButton from '@mui/material/IconButton';
 import {useSelector} from "react-redux";
-
-import { format } from 'date-fns'
 import {Link} from "react-router-dom";
 
 const Profile = () => {
@@ -36,11 +34,11 @@ const Profile = () => {
                 </div>
             </div>
             <div className="row">
-                <img src={profile.bannerPicture} className="img-fluid" width="100%" height="200px" />
+                <img src={profile.bannerPicture}  alt="nt" className="img-fluid" width="100%" height="200px" />
             </div>
             <div className="row">
                 <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10" >
-                    <img src={profile.profilePicture} className="rounded-circle position-relative" height="100px" width="100px" style={{"bottom":"1rem"}}/>
+                    <img src={profile.profilePicture}  alt="nt" className="rounded-circle position-relative" height="100px" width="100px" style={{"bottom":"1rem"}}/>
                 </div>
                 <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 mt-1">
                     <Link to="/tuiter/edit"><div className="btn wd-rounded-buttons float-right" style={{"background":"black","color":"white","border":"1px solid black"}}>Edit</div></Link>
