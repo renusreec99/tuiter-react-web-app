@@ -30,7 +30,7 @@ const Profile = () => {
                 </div>
                 <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10">
                     <span style={{"color":"black","fontSize":"1.5em"}}>{profile.firstName}&nbsp;{profile.lastName}</span><br />
-                    <span className="wd-gray-color">320 Tweets</span>
+                    <span className="wd-gray-color">8 Tweets</span>
                 </div>
             </div>
             <div className="row">
