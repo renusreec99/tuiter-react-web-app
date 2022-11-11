@@ -4,17 +4,18 @@ import PostSummaryList from "../post-summary-list";
 // import PostListnew from "./HomeComponent";
 import HomeNew from "../TuitList";
 import WhoToFollowList from "../who-to-follow-list";
+import Profile from "./profile-component";
 
 
-const HomeScreen = () => {
+const ProfileScreen = () => {
 
     return (<>
             <div className="row">
                 <div className="col-xxl-2 col-xl-2 col-lg-1 col-md-2 col-sm-2">
-                    <NavigationSidebar active='home'/>
+                    <NavigationSidebar active='Profile'/>
                 </div>
                 <div className="col-xxl-6 col-xl-6 col-lg-7 col-md-10 col-sm-10">
-                    <HomeComponent/>
+                    <Profile/>
                 </div>
                 <div className="col-xxl-4 col-xl-4 col-lg-4 d-none d-lg-block">
                     <WhoToFollowList/>
@@ -23,4 +24,9 @@ const HomeScreen = () => {
         </>
     );
 };
-export default HomeScreen;
+export default ProfileScreen;
+
+
+
+
+

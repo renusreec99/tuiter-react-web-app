@@ -4,7 +4,7 @@ import Tuiter from "./tuiter";
 import {BrowserRouter} from "react-router-dom";
 import {Routes, Route} from "react-router";
 import HomeScreen from "./tuiter/home";
-
+import Profile from "./tuiter/Profile";
 
 function App() {
    return (
@@ -12,15 +12,16 @@ function App() {
 
       <div className="container">
          <Routes>
-          <Route index
+          <Route path="/*"
                  element={<Labs/>}/>
           <Route path="/hello"
                  element={<HelloWorld/>}/>
           <Route path="/tuiter/*"
                  element={<Tuiter/>}/>
                  
-         <Route path="/tuiter/home"    element={<HomeScreen/>}/>
-     
+         {/* <Route path="/tuiter/home" element={<HomeScreen/>}/>
+         
+     <Route path="/tuiter/Profile" element={<Profile/>}/> */}
 
 
         </Routes>
