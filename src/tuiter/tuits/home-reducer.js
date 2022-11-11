@@ -1,9 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import posts from './tuits.json';
 const currentUser = {
-    "userName": "NASA",
+    "username": "NASA",
     "handle": "@nasa",
-    "image": "nasa.png",
+    "image": "/images/nasa.png",
+    "cover":"/images/rb.jpeg",
+
    };
    
    const templateTuit = {
@@ -34,7 +36,7 @@ const homeSlice = createSlice({
         ...templateTuit,
         _id: (new Date()).getTime(),
       })
-    //   console.log(state);
+
     }
   }
  
