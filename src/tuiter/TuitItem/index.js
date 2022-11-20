@@ -1,11 +1,12 @@
 import React from "react";
 import {useDispatch} from "react-redux";
-
-import { deleteTuit } from "../tuits/home-reducer";
+import { deleteTuitThunk } from "../../services/tuits-thunks";
+import TuitStats from "../TuitStat";
+// import { deleteTuit } from "../tuits/home-reducer";
 const PostListnew = ({posts}) =>{
     const dispatch = useDispatch();
     const deleteTuitHandler = (id) => {
-      dispatch(deleteTuit(id));
+        dispatch(deleteTuitThunk(id));
     }
     
     return(
@@ -14,6 +15,7 @@ const PostListnew = ({posts}) =>{
                 <div className="col-2">
                     <img src={posts.image} className="rounded-circle"  height="40px" width="40px" alt= "nt"/>
                 </div>
+                {console.log(posts)}
                 <div className="col-10 p-0">
                     <span className="text-black">{posts.username}</span>
                     <i className="fa fa-check-circle"></i>
@@ -37,18 +39,9 @@ const PostListnew = ({posts}) =>{
   </div>
 
             <div className="row">
-            <div className="col-3">
-                <i className='fa fa-comment text-secondary'>&nbsp;{posts.comments}</i>
-            </div>
-            <div className="col-3">
-                <i className='fa fa-share-alt text-secondary'>&nbsp;{posts.shares}</i>
-            </div>
-            <div className="col-3">
-                <i className='fa fa-heart text-secondary'>&nbsp;{posts.hearts}</i>
-            </div>
-            <div className="col-3">
-                <i className='fa fa-download text-secondary'></i>
-            </div>
+            <div>
+        <TuitStats tuit = {posts}/>
+        </div>
             </div>
         </div>
     );

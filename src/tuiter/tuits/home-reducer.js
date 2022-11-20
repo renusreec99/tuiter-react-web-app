@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import posts from './tuits.json';
+import {findTuitsThunk,deleteTuitThunk,createTuitThunk,updateTuitThunk}
+  from "../../services/tuits-thunks";
 const currentUser = {
     "username": "NASA",
     "handle": "@nasa",
@@ -16,11 +18,61 @@ const currentUser = {
     "replies": 0,
     "retuits": 0,
     "likes": 0,
+    "dislikes":0,
+    "disliked":false,
+    "image": "/images/nasa.png",
+    "cover":"/images/rb.jpeg",
    }
-   
+   const initialState = {
+    posts: [],
+    loading: false
+ }
+ 
 const homeSlice = createSlice({
  name: 'posts',
- initialState: posts,
+ initialState,
+ extraReducers: {
+   [findTuitsThunk.pending]:
+      (state) => {
+         state.loading = true
+         state.posts = []
+   },
+   [findTuitsThunk.fulfilled]:
+      (state, { payload }) => {
+         state.loading = false
+         state.posts = payload
+   },
+   [findTuitsThunk.rejected]:
+      (state) => {
+         state.loading = false
+   },
+   [deleteTuitThunk.fulfilled] :
+      (state, { payload }) => {
+      state.loading = false
+      state.posts = state.posts
+        .filter(t => t._id !== payload)
+    },
+    [createTuitThunk.fulfilled]:
+    (state, { payload }) => {
+      state.loading = false
+      state.posts.push(payload)
+  },
+  [updateTuitThunk.fulfilled]:
+  (state, { payload }) => {
+    state.loading = false
+    const tuitNdx = state.posts
+      .findIndex((t) => t._id === payload._id)
+    state.posts[tuitNdx] = {
+      ...state.posts[tuitNdx],
+      ...payload
+    }
+  }
+
+
+
+
+ },
+
  reducers: {
     deleteTuit(state, action) {
         const index = state

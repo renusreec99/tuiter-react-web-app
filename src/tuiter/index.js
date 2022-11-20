@@ -12,7 +12,7 @@ import profileReducer from "./reducers/profile-reducer";
 import EditProfile from "./EditProfile";
 
 const store = configureStore(
-  {reducer: {who: whoReducer, posts: tuitsReducer, tuits:homeReducer, profile: profileReducer }});
+  {reducer: {who: whoReducer, postsData:homeReducer, profile: profileReducer }});
 
 function TuiterPage() {
  return (
