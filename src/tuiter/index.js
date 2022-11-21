@@ -5,7 +5,6 @@ import HomeScreen from "./home";
 import ProfileScreen from "./Profile";
 import whoReducer from "./reducers/who-reducer";
 import { configureStore } from '@reduxjs/toolkit';
-import tuitsReducer from "./tuits/tuits-reducer";
 import homeReducer from "./tuits/home-reducer";
 import {Provider} from "react-redux";
 import profileReducer from "./reducers/profile-reducer";
