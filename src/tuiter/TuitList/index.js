@@ -12,7 +12,9 @@ const HomeNew = () => {
     const dispatch = useDispatch();
     useEffect(() => {
       dispatch(findTuitsThunk())
+      // eslint-disable-next-line 
     }, [])
+    
    
     return (
         <div className="list-group">
