@@ -4,6 +4,7 @@ import {findTuitsThunk,deleteTuitThunk,createTuitThunk,updateTuitThunk}
 const currentUser = {
     "username": "NASA",
     "handle": "@nasa",
+    "username": "SpaceX",
     "image": "/images/nasa.png",
     "cover":"/images/rb.jpeg",
 
