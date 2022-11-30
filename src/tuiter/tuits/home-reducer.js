@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 import {findTuitsThunk,deleteTuitThunk,createTuitThunk,updateTuitThunk}
   from "../../services/tuits-thunks";
 const currentUser = {
+    // eslint-disable-next-line 
     "username": "NASA",
     "handle": "@nasa",
-    "username": "SpaceX",
     "image": "/images/nasa.png",
     "cover":"/images/rb.jpeg",
 
